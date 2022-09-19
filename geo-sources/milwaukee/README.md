@@ -8,5 +8,5 @@
     st_read("https://lio.milwaukeecountywi.gov/arcgis/rest/services//Parks/Milwaukee_Co_Trails/FeatureServer/0/query?outFields=%2A&returnGeometry=true&f=geojson"),
     "geo-sources/milwaukee/Trails_in_Milwaukee_County.geojson",
     delete_dsn = T
-)
+  )
   ```
