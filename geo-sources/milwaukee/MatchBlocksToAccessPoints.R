@@ -3,6 +3,14 @@ rm(list = ls())
 library(tidyverse)
 library(sf)
 
+# this script does the following:
+#   1.  subsets cycleways meeting a minimum length standard
+#   2.  subsets intersections connecting to qualifying cycleways
+#   3.  subsets blocks to only those with non-zero population
+#   4.  finds the nearest qualified intersection to each block centroid
+#   5.  calculates the distance between each block centroid and its nearest access point
+#   6.  reformats blocks with access points, and saves the output
+
 all.cycleways <- st_read("geo-sources/milwaukee/processed-data/Cycleways.geojson")
 all.access.points <- st_read("geo-sources/milwaukee/processed-data/Cycleway_Access_Points.geojson")
 all.blocks <- st_read("geo-sources/milwaukee/Census_Blocks_2020_centroids.geojson")
