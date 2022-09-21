@@ -1,9 +1,16 @@
-rm(list = ls())
-
 library(tidyverse)
 library(sf)
 library(leaflet)
 #options(warn=0)
+
+################################################################
+# This script does the following:
+#   1. extract OSM cycleways
+#   2. identify contiguous cycleways from constituent segments
+#   3. measure contiguous cycleway lengths
+#   4. find intersections between roads/paths and cycleways
+#   5. save cycleway output (with contiguous lengths)
+#   6. save intersection output
 
 roads <- st_read("geo-sources/milwaukee/OSM_Roads_and_Paths.geojson") %>%
   mutate(label = paste(name, "<br>",
