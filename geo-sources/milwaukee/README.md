@@ -5,3 +5,4 @@
 * `ProcessCyclesways.R` creates `processed-data/Cycleways.geojson` and `processed-data/Cycleway_Access_Points.geojson`.
 * `Fetch2020CensusBlocks.R` uses {{tidycensus}} to retrieve 2020 census data.
 * `Census_Blocks_2020_centroids.geojson` contains population counts (total and by race/ethnicity) for Milwaukee County census blocks, along with their centroids.
+* `MatchBlocksToAccessPoints.R` creates `processed-data/Blocks_Matched_To_Access_Points.rds`

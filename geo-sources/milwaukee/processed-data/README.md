@@ -25,3 +25,23 @@ This file contains the intersections between roads (and paths) with cycleways.
 * `road_layer` - the layer of the intersected road, always identical to the layer of the intersected cycleway
 * `road_name` - the name of the intersected road
 * `geometry`  - POINT, WGS84 (crs = 4326)
+
+## Blocks_Matched_To_Access_Points.rds
+
+This file contains populated block centroids, block demographics, and each block's nearest trail access point. The file is in RDS format to accomodate the inclusion of both the block centroid geometry and the access point geometry.
+
+* `block_fips` - FIPS code for the 2020 census block
+* `pop` - total population, 2020 census
+* `pop_hisp` - Hispanic or Latino population
+* `pop_white` - White (not Hispanic or Latino)
+* `pop_black` - Black or African American (not Hispanic or Latino)
+* `pop_aian`  - American Indian or Alaska Native (not Hispanic or Latino)
+* `pop_asian` - Asian (not Hispanic or Latino)
+* `pop_nhpi`  - Native Hawaiin or Pacific Islander (not Hispanic or Latino)
+* `pop_other` - any other single race (not Hispanic or Latino)
+* `pop_two`   - two or more races (not Hispanic or Latino)
+* `cycle_id`  - the osm_id of the cycleway with the nearest access point
+* `road_id`   - the osm_id of the road/path with the nearest trail access point
+* `distance_in_miles` - distance between the block centroid and the access point
+* `geometry_block`  - the centroid of the block, POINT WGS84 (CRS = 4326)
+* `geometry_access_point` - the trail access point, POINT WGS84 (CRS = 4326)
